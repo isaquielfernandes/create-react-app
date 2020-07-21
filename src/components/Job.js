@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Card, Badge, Button, Collapse } from 'react-bootstrap'
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown//with-html'
 
 const Job = ({ job }) => {
     const [open, setOpen] = useState(false)
