@@ -22,7 +22,7 @@ const Job = ({ job }) => {
                             <ReactMarkdown source={job.how_to_apply}  escapeHtml={false}/>
                         </div>
                     </div>
-                    <img src={job.company_logo} alt={job.company} className="d-nome d-md-block img-fluid" />
+                    <img src={job.company_logo} alt={job.company} className="d-nome d-md-block img-fluid" width="30" height="30"/>
                 </div>
                 <Card.Text>
                     <Button variant="primary" onClick={() => setOpen(prevOpen => !prevOpen)}>
