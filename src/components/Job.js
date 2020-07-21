@@ -6,7 +6,7 @@ const Job = ({ job }) => {
     const [open, setOpen] = useState(false)
 
     return (
-        <Card className="mt-3">
+        <Card className="mt-3 mb-2">
             <Card.Body>
                 <div className="d-flex justify-content-between">
                     <div>
@@ -36,7 +36,7 @@ const Job = ({ job }) => {
                 </Collapse>
             </Card.Body>
         </Card>
-    );
-};
+    )
+}
 
 export default Job;
