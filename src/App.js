@@ -5,6 +5,7 @@ import { Container } from 'react-bootstrap'
 import Job from './components/Job'
 import JobsPagination from './components/JobsPagination';
 import SearchForm from './components/SearchForm';
+import Navigation from './components/Navigation'
 
 const App = () => {
   const [params, setParams] = useState({});
@@ -22,7 +23,9 @@ const App = () => {
   }
 
   return (
-      <Container className="my-4">
+    <>
+      <Navigation/>
+      <Container className="my-4" >
         <h1 className="mb-4">GitHub Jobs</h1>
         <SearchForm params={params} onParamChange={handleParamChange} />
         <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />
@@ -33,6 +36,7 @@ const App = () => {
         })}
         <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />
       </Container>
+    </>
   );
 }
 

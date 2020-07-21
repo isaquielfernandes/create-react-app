@@ -19,7 +19,7 @@ const Job = ({ job }) => {
                         <Badge variant="secondary" className="mr-2">{job.type}</Badge>
                         <Badge variant="secondary">{job.location}</Badge>
                         <div style={{ wordBreak: 'break-all'}}>
-                            <ReactMarkdown source={job.how_to_apply}/>
+                            <ReactMarkdown source={job.how_to_apply}  escapeHtml={false}/>
                         </div>
                     </div>
                     <img src={job.company_logo} alt={job.company} height="50" className="d-nome d-md-block" />
@@ -31,7 +31,7 @@ const Job = ({ job }) => {
                 </Card.Text>
                 <Collapse in={open}>
                     <div className="mt-4">
-                        <ReactMarkdown source={job.description}/>
+                        <ReactMarkdown source={job.description}  escapeHtml={false}/>
                     </div>
                 </Collapse>
             </Card.Body>
